@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <body style="background-color: black;"></body> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        .mySkills, .myWork {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            
+        }
+        .flexContainer, .workGrid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .flexContainer > div, .workGrid > div {
+            flex: 1 1 calc(33.33% - 20px);
+            box-sizing: border-box;
+            border: 3px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .workGrid > div {
+            flex: 1 1 calc(50% - 20px);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #f10303;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ce6969;
+        }
+    </style>
+</head>
+<body>
+    <!-- My UX Skills Section -->
+    <section class="mySkills">
+        <h1 style="color: white"> My UX Skills</h1>
+        <div class="flexContainer">
+            <div>
+                <h3 style="color: white"> UI Analysis and Patterns/Wireframes</h3>
+                <p style="color: white"> I enjoy UI more than UX. Wireframing is very important because it is the base of how the website will look.</p>
+            </div>
+            <div>
+                <h3 style="color: white"> Color Theory and Typography</h3>
+                <p style="color: white"> I've always really enjoyed the aesthetics of things so I pride myself on creating visually apealing things and paying attention to detail.</p>
+            </div>
+            <div>
+                <h3 style="color: white"> User Research</h3>
+                <p style="color: white">I find UX quite fascinating because it involves User Research and understanding the users needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Work Section -->
+    <section class="myWork">
+        <h1 style="color: white"> My Work</h1>
+        <div class="workGrid">
+            <div>
+                <img src="IMAGES/Screenshot 2024-06-04 at 5.51.57 PM.png" alt="Work 1"
+                height= 200px;
+                width= 200px;>
+            </div>
+            <div>
+                <h4 style="color: white"> Government Website Redesign</h4>
+                <p style="color: white">Redesigned the website for The Department of Energy</p>
+                <button>View Project</button>
+            </div>
+            <div>
+                <img src="IMAGES/Screenshot 2024-05-21 at 12.34.31 PM.png" alt="Work 2"
+                width= 100px;
+                height= 100px;>
+            </div>
+            <div>
+                <h4 style="color: white">CityVibe</h4>
+                <p style="color: white">Created a mobile app to improve group travel planning. </p>
+                <button>View Project</button>
+            </div>
+        </div>
+        <h3 style="color: white">View all projects</h3>
+    </section>
+</body>
+</html>

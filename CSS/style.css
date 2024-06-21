@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex and Row-Reverse */
+div {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* My UX Skills section styles */
+.mySkills h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; /* Reset flex direction for flex container */
+}
+
+.flexContainer > div {
+    width: 33%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column; /* Reset flex direction for flex children */
+}
+
+.flexContainer img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.flexContainer h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.flexContainer p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* My Work section styles */
+.myWork h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Grid container for My Work section */
+.workGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    grid-template-areas: 
+        "work1-image work1-details"
+        "work2-image work2-details";
+}
+
+.workGrid > div {
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column; /* Reset flex direction for grid children */
+}
+
+/* Grid area definitions */
+.work1-image {
+    grid-area: work1-image;
+}
+
+.work1-details {
+    grid-area: work1-details;
+}
+
+.work2-image {
+    grid-area: work2-image;
+}
+
+.work2-details {
+    grid-area: work2-details;
+}
+
+.workGrid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.workGrid h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.workGrid p {
+    font-size: 14px;
+    color: #666;
+}
+
+.workGrid button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.workGrid button:hover {
+    background-color: #0056b3;
+}
+
+.myWork h3 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Mobile Media Query */
+@media (max-width: 600px) {
+    .flexContainer {
+        flex-direction: column;
+    }
+
+    .flexContainer > div {
+        width: 100%;
+    }
+
+    .workGrid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "work1-image"
+            "work1-details"
+            "work2-image"
+            "work2-details";
+    }
+}
